@@ -254,6 +254,8 @@ section { padding: 72px 0; }
 
 .card h3 { font-size: 1.15rem; margin-bottom: 0.4em; }
 
+.card .tag { align-self: flex-start; font-size: 0.85rem; margin-bottom: 10px; }
+
 .card p { margin: 0 0 16px; font-size: 1.05rem; color: var(--muted); }
 
 .card .button { margin-top: auto; align-self: flex-start; padding: 9px 18px; font-size: 0.8rem; }
