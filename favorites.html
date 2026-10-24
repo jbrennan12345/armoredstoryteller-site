@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Favorites - Armored Storyteller Publishing</title>
+  <meta name="description" content="Customer favorites and bundles from Armored Storyteller Publishing.">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img class="logo-img" src="images/logo-black.png" alt="">
+        <span>Armored Storyteller</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Products</a>
+        <a href="favorites.html" aria-current="page">Favorites</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Customer Favorites</span>
+        <h1>Bundles &amp; Collections</h1>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <div class="section-title">
+          <p>Our most popular titles, grouped for the tables that love them.</p>
+        </div>
+        <div id="bundles" class="bundles"></div>
+        <noscript><p class="section-title">Turn on JavaScript to see our bundles, or browse <a href="index.html#products">all products</a>.</p></noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <img class="logo-img" src="images/logo-black.png" alt="">
+      <p>&copy; 2026 Armored Storyteller Publishing Inc. &middot; Boston, MA</p>
+      <p><a href="index.html#products">Products</a> &middot; <a href="favorites.html">Favorites</a> &middot; <a href="about.html">About</a> &middot; <a href="blog.html">Blog</a> &middot; <a href="about.html#contact">Contact</a></p>
+    </div>
+  </footer>
+
+  <script src="favorites-data.js"></script>
+  <script>
+    // Builds one card per bundle from favorites-data.js
+    (function () {
+      var root = document.getElementById("bundles");
+
+      function el(tag, className, text) {
+        var node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text) node.textContent = text;
+        return node;
+      }
+
+      BUNDLES.forEach(function (bundle) {
+        var items = bundle.products.map(function (id) { return PRODUCTS[id]; }).filter(Boolean);
+        var card = el("article", "bundle");
+
+        var covers = el("div", "bundle-covers");
+        covers.style.setProperty("--n", items.length);
+        items.forEach(function (p) {
+          var img = el("img");
+          img.src = p.cover;
+          img.alt = p.title + " cover";
+          covers.appendChild(img);
+        });
+        card.appendChild(covers);
+
+        var body = el("div", "bundle-body");
+        body.appendChild(el("span", "tag", items.length + " titles"));
+        body.appendChild(el("h2", null, bundle.name));
+        body.appendChild(el("p", null, bundle.pitch));
+
+        var list = el("ul", "bundle-list");
+        items.forEach(function (p) {
+          var li = el("li");
+          var a = el("a", null, p.title);
+          a.href = p.link;
+          li.appendChild(a);
+          list.appendChild(li);
+        });
+        body.appendChild(list);
+
+        if (bundle.link) {
+          var buy = el("a", "button", "Get the Bundle");
+          buy.href = bundle.link;
+          body.appendChild(buy);
+        } else {
+          body.appendChild(el("p", "bundle-note", "Bundle coming soon. Each title is available on its own now."));
+        }
+
+        card.appendChild(body);
+        root.appendChild(card);
+      });
+    })();
+  </script>
+
+</body>
+</html>

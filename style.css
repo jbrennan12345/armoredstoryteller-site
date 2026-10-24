@@ -289,6 +289,61 @@ section { padding: 72px 0; }
 
 .forge-item p { margin: 0; color: var(--muted); }
 
+/* Customer Favorites bundles */
+
+.bundles {
+  display: grid;
+  gap: 32px;
+}
+
+.bundle {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 40px;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 36px;
+}
+
+.bundle-covers {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+/* --n (number of covers) is set by favorites.html; covers overlap by 30% and always fit the column */
+.bundle-covers img {
+  --w: min(190px, calc(100% / (0.7 * var(--n, 2) + 0.3)));
+  width: var(--w);
+  min-width: 0;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
+}
+
+.bundle-covers img + img { margin-left: calc(-0.3 * var(--w)); }
+
+.bundle-covers img:nth-child(even) { transform: translateY(14px); }
+
+.bundle h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); margin-bottom: 0.4em; }
+
+.bundle p { margin: 0 0 16px; color: #d8cfc2; }
+
+.bundle-list {
+  margin: 0 0 22px;
+  padding-left: 1.2em;
+}
+
+.bundle-list li { margin: 4px 0; }
+
+.bundle-list a { text-decoration: none; }
+
+.bundle-list a:hover { text-decoration: underline; }
+
+.bundle .bundle-note { color: var(--muted); font-style: italic; margin: 0; }
+
 /* ---------- Text pages ---------- */
 
 .page-head {
@@ -367,5 +422,6 @@ section { padding: 72px 0; }
   .hero { padding: 70px 0 60px; }
   .feature { grid-template-columns: 1fr; gap: 28px; }
   .forge-item { grid-template-columns: 100px 1fr; }
+  .bundle { grid-template-columns: 1fr; gap: 24px; padding: 24px 18px; }
   section { padding: 52px 0; }
 }
