@@ -72,7 +72,7 @@ var BUNDLES = [
     pitch: "Genre rules for modern zombie apocalypse horror, survival and adventure for Old-School Essentials: 13 modern classes, a bestiary of the Infected, and tables to roll the cause of the outbreak. Now with free character sheets: printable, fillable, and fillable with a photo slot.",
     products: ["dead-men-walking"],
     link: "https://www.drivethrurpg.com/product/413932/Dead-Men-Walking-Genre-Rules-for-Modern-Zombie-Apocalypse-Horror-Survival-and-Adventure",
-    price: "$19.99",
+    price: "$17.99",
     was: "$24.99",
     button: "Get It on DriveThruRPG"
   },
