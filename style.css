@@ -215,6 +215,40 @@ section { padding: 72px 0; }
   margin: 0 6px 16px 0;
 }
 
+/* Seasonal special section */
+
+.special {
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(160, 30, 20, 0.28) 0%, rgba(18, 16, 16, 0) 65%),
+    var(--bg);
+  border-top: 1px solid var(--ember-dark);
+  border-bottom: 1px solid var(--ember-dark);
+}
+
+.special-callout {
+  border-left: 3px solid var(--ember);
+  padding: 4px 0 4px 14px;
+  color: var(--text);
+}
+
+/* Slim "new bundle" strip */
+
+.bundle-strip { padding: 22px 0; background: var(--surface); }
+
+.bundle-strip .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 28px;
+  flex-wrap: wrap;
+}
+
+.bundle-strip p { margin: 0; flex: 1 1 480px; }
+
+.bundle-strip .eyebrow { display: inline; margin-right: 8px; }
+
+.bundle-strip s { color: var(--muted); margin-left: 6px; }
+
 /* Product grid */
 
 .grid {
@@ -343,6 +377,17 @@ section { padding: 72px 0; }
 .bundle-list a:hover { text-decoration: underline; }
 
 .bundle .bundle-note { color: var(--muted); font-style: italic; margin: 0; }
+
+.bundle .bundle-price { display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px; }
+
+.bundle-price strong { font-family: var(--heading-font); font-size: 1.6rem; color: var(--text); }
+
+.bundle-price s { color: var(--muted); font-size: 1.1rem; }
+
+/* Seasonal / special-offer highlight */
+.bundle-special { border-color: var(--ember); box-shadow: 0 0 0 1px var(--ember-dark), 0 18px 40px rgba(224, 128, 58, 0.12); }
+
+.tag-special { background: var(--ember); border-color: var(--ember); color: #1a0f08; font-weight: 600; }
 
 /* ---------- Text pages ---------- */
 

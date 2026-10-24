@@ -7,6 +7,12 @@
     products  - which books are in it (use the short names from PRODUCTS)
     link      - the DriveThruRPG bundle page. Leave it as "" until the bundle
                 exists; the page then links to each book on its own instead.
+    price     - (optional) the bundle price shown on the card, e.g. "$9.98"
+    was       - (optional) the regular price, shown crossed out, e.g. "$10.97"
+    badge     - (optional) a label such as "Halloween Special"; otherwise the
+                card shows how many titles it contains
+    button    - (optional) the button text; defaults to "Get the Bundle"
+    note      - (optional) text shown instead of a button when there's no link
 
   Keep the quotes and commas exactly as they are.
 */
@@ -61,21 +67,28 @@ var PRODUCTS = {
 
 var BUNDLES = [
   {
+    name: "Dead Men Walking",
+    badge: "Halloween Special",
+    pitch: "Genre rules for modern zombie apocalypse horror, survival and adventure for Old-School Essentials: 13 modern classes, a bestiary of the Infected, and tables to roll the cause of the outbreak. Now with free character sheets: printable, fillable, and fillable with a photo slot.",
+    products: ["dead-men-walking"],
+    link: "https://www.drivethrurpg.com/product/413932/Dead-Men-Walking-Genre-Rules-for-Modern-Zombie-Apocalypse-Horror-Survival-and-Adventure",
+    price: "$19.99",
+    was: "$24.99",
+    button: "Get It on DriveThruRPG"
+  },
+  {
+    name: "Old School Essentials Bundle",
+    pitch: "Three adventures designed for use with Old-School Essentials: the cursed town of Reinhorn and its ghostly horsemen for levels 2 to 5, a fungal green dragon for levels 5 to 10, and a trap-filled tomb for levels 8 and up.",
+    products: ["horsemen-of-reinhorn", "lair-of-amanitus", "tomb-of-the-baboon-king"],
+    link: "https://www.drivethrurpg.com/en/product/590653/old-school-essentials-bundle-bundle",
+    price: "$9.98",
+    was: "$10.97"
+  },
+  {
     name: "Forbidden Lands Collection",
     pitch: "Three adventures and a grimoire for Free League's Forbidden Lands: a wendigo on the Morma Glacier, a drowned king's vengeance, a mad sorcerer in the Firelands, and a compendium of demon lore.",
     products: ["winters-woe", "drowned-king", "embers-of-horncrest", "book-of-mog"],
-    link: ""
-  },
-  {
-    name: "OSE Campaign Drops",
-    pitch: "Two ready-to-drop lairs for Old-School Essentials: a fungal green dragon for levels 5 to 10, and a trap-filled tomb for levels 8 and up.",
-    products: ["lair-of-amanitus", "tomb-of-the-baboon-king"],
-    link: ""
-  },
-  {
-    name: "Old-School Horror",
-    pitch: "Horror for OSE tables: a Grimm-fairy-tale adventure in cursed Reinhorn, and genre rules for surviving a modern zombie apocalypse.",
-    products: ["horsemen-of-reinhorn", "dead-men-walking"],
-    link: ""
+    link: "",
+    note: "Collect all four. Each title is available on DriveThruRPG."
   }
 ];

@@ -85,26 +85,41 @@
         card.appendChild(covers);
 
         var body = el("div", "bundle-body");
-        body.appendChild(el("span", "tag", items.length + " titles"));
+        if (bundle.badge) {
+          card.className += " bundle-special";
+          body.appendChild(el("span", "tag tag-special", bundle.badge));
+        } else {
+          body.appendChild(el("span", "tag", items.length + " titles"));
+        }
         body.appendChild(el("h2", null, bundle.name));
         body.appendChild(el("p", null, bundle.pitch));
 
-        var list = el("ul", "bundle-list");
-        items.forEach(function (p) {
-          var li = el("li");
-          var a = el("a", null, p.title);
-          a.href = p.link;
-          li.appendChild(a);
-          list.appendChild(li);
-        });
-        body.appendChild(list);
+        // A single-title card doesn't need a contents list
+        if (items.length > 1) {
+          var list = el("ul", "bundle-list");
+          items.forEach(function (p) {
+            var li = el("li");
+            var a = el("a", null, p.title);
+            a.href = p.link;
+            li.appendChild(a);
+            list.appendChild(li);
+          });
+          body.appendChild(list);
+        }
+
+        if (bundle.price) {
+          var price = el("p", "bundle-price");
+          price.appendChild(el("strong", null, bundle.price));
+          if (bundle.was) price.appendChild(el("s", null, bundle.was));
+          body.appendChild(price);
+        }
 
         if (bundle.link) {
-          var buy = el("a", "button", "Get the Bundle");
+          var buy = el("a", "button", bundle.button || "Get the Bundle");
           buy.href = bundle.link;
           body.appendChild(buy);
         } else {
-          body.appendChild(el("p", "bundle-note", "Bundle coming soon. Each title is available on its own now."));
+          body.appendChild(el("p", "bundle-note", bundle.note || "Bundle coming soon. Each title is available on its own now."));
         }
 
         card.appendChild(body);
