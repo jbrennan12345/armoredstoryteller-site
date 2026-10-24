@@ -62,7 +62,7 @@ var PRODUCTS = {
 var BUNDLES = [
   {
     name: "Forbidden Lands Collection",
-    pitch: "Four adventures and a grimoire for Free League's Forbidden Lands: a wendigo on the Morma Glacier, a drowned king's vengeance, a mad sorcerer in the Firelands, and a compendium of demon lore.",
+    pitch: "Three adventures and a grimoire for Free League's Forbidden Lands: a wendigo on the Morma Glacier, a drowned king's vengeance, a mad sorcerer in the Firelands, and a compendium of demon lore.",
     products: ["winters-woe", "drowned-king", "embers-of-horncrest", "book-of-mog"],
     link: ""
   },
