@@ -232,8 +232,14 @@ section { padding: 72px 0; }
   flex-direction: column;
 }
 
+.feature .feature-cover {
+  max-width: 420px;
+  width: 100%;
+  justify-self: center;
+}
+
 .card-art {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 600 / 775;
   background: radial-gradient(circle at 50% 40%, #3a2a20 0%, #1a1513 75%);
   display: flex;
   align-items: center;
