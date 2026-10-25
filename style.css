@@ -303,7 +303,7 @@ section { padding: 72px 0; }
 /* Two-column "coming soon" */
 
 .forge {
-  max-width: 760px;
+  max-width: 1000px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
