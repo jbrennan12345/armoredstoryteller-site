@@ -67,18 +67,18 @@ var PRODUCTS = {
 
 var BUNDLES = [
   {
+    name: "Forbidden Lands Collection",
+    pitch: "Three adventures and a grimoire for Free League's Forbidden Lands: a wendigo on the Morma Glacier, a drowned king's vengeance, a mad sorcerer in the Firelands, and a compendium of demon lore.",
+    products: ["winters-woe", "drowned-king", "embers-of-horncrest", "book-of-mog"],
+    link: "",
+    note: "Collect all four. Each title is available on DriveThruRPG."
+  },
+  {
     name: "Old School Essentials Bundle",
     pitch: "Three adventures designed for use with Old-School Essentials: the cursed town of Reinhorn and its ghostly horsemen for levels 2 to 5, a fungal green dragon for levels 5 to 10, and a trap-filled tomb for levels 8 and up.",
     products: ["horsemen-of-reinhorn", "lair-of-amanitus", "tomb-of-the-baboon-king"],
     link: "https://www.drivethrurpg.com/en/product/590653/old-school-essentials-bundle-bundle",
     price: "$9.98",
     was: "$10.97"
-  },
-  {
-    name: "Forbidden Lands Collection",
-    pitch: "Three adventures and a grimoire for Free League's Forbidden Lands: a wendigo on the Morma Glacier, a drowned king's vengeance, a mad sorcerer in the Firelands, and a compendium of demon lore.",
-    products: ["winters-woe", "drowned-king", "embers-of-horncrest", "book-of-mog"],
-    link: "",
-    note: "Collect all four. Each title is available on DriveThruRPG."
   }
 ];
