@@ -231,6 +231,68 @@ section { padding: 72px 0; }
   color: var(--text);
 }
 
+/* World of Darkness line (Vampire): crimson / neon-noir */
+
+.wod {
+  --blood: #c4122f;
+  --neon: #ff2d55;
+  background:
+    radial-gradient(ellipse at 22% 45%, rgba(196, 18, 47, 0.38) 0%, rgba(10, 6, 8, 0) 60%),
+    radial-gradient(ellipse at 85% 10%, rgba(255, 45, 85, 0.12) 0%, rgba(10, 6, 8, 0) 45%),
+    #0a0608;
+  border-top: 1px solid #3a0c16;
+  border-bottom: 1px solid #3a0c16;
+  padding: 84px 0;
+}
+
+.wod .eyebrow { color: var(--neon); }
+
+.wod .section-title h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #f3e9ea;
+  text-shadow: 0 0 18px rgba(255, 45, 85, 0.45);
+}
+
+.wod .section-title p { color: #c9b4b8; }
+
+.wod .feature h2 { color: #f3e9ea; }
+
+.wod-cover {
+  border-color: #5a1222 !important;
+  box-shadow: 0 0 0 1px #5a1222, 0 0 40px rgba(255, 45, 85, 0.35), 0 24px 60px rgba(0, 0, 0, 0.7) !important;
+}
+
+.wod-hook {
+  font-family: var(--heading-font);
+  font-size: 1.35rem;
+  color: var(--neon);
+  margin: -0.2em 0 0.8em;
+}
+
+.wod p { color: #e6d8da; }
+
+.wod-clans {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wod-clans li {
+  font-size: 0.95rem;
+  padding: 2px 12px;
+  border: 1px solid #6b1729;
+  border-radius: 20px;
+  color: #f0c9d0;
+  background: rgba(196, 18, 47, 0.12);
+}
+
+.button.wod-button { background: var(--blood); color: #fff; }
+
+.button.wod-button:hover { background: var(--neon); color: #fff; }
+
 /* Slim "new bundle" strip */
 
 .bundle-strip { padding: 22px 0; background: var(--surface); }
