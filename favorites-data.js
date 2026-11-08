@@ -67,16 +67,6 @@ var PRODUCTS = {
 
 var BUNDLES = [
   {
-    name: "Dead Men Walking",
-    badge: "Halloween Special",
-    pitch: "Genre rules for modern zombie apocalypse horror, survival and adventure for Old-School Essentials: 13 modern classes, a bestiary of the Infected, and tables to roll the cause of the outbreak. Now with free character sheets: printable, fillable, and fillable with a photo slot.",
-    products: ["dead-men-walking"],
-    link: "https://www.drivethrurpg.com/product/413932/Dead-Men-Walking-Genre-Rules-for-Modern-Zombie-Apocalypse-Horror-Survival-and-Adventure",
-    price: "$17.99",
-    was: "$24.99",
-    button: "Get It on DriveThruRPG"
-  },
-  {
     name: "Old School Essentials Bundle",
     pitch: "Three adventures designed for use with Old-School Essentials: the cursed town of Reinhorn and its ghostly horsemen for levels 2 to 5, a fungal green dragon for levels 5 to 10, and a trap-filled tomb for levels 8 and up.",
     products: ["horsemen-of-reinhorn", "lair-of-amanitus", "tomb-of-the-baboon-king"],
