@@ -578,3 +578,57 @@ section { padding: 72px 0; }
   .bundle { grid-template-columns: 1fr; gap: 24px; padding: 24px 18px; }
   section { padding: 52px 0; }
 }
+
+/* Dead Men Walking page: ash, smoke and blood */
+
+.dmw-page { background: #0b0b0b; }
+
+.dmw {
+  --toxic: #d8261b;
+  --ash: #b9b2a8;
+  background:
+    radial-gradient(ellipse at 25% 40%, rgba(216, 38, 27, 0.22) 0%, rgba(11, 11, 11, 0) 60%),
+    #0b0b0b;
+  border-top: 1px solid #2a1512;
+  padding: 80px 0;
+}
+
+.dmw-alt { background: #141210; }
+
+.dmw .eyebrow { color: #ff4a3d; }
+
+.dmw h2, .dmw h3, .dmw-title { color: #efe9e2; }
+
+.dmw-title { font-size: clamp(2.3rem, 6vw, 3.6rem); text-shadow: 0 0 20px rgba(216, 38, 27, 0.5); margin-bottom: 0.2em; }
+
+.dmw p { color: #ddd5cb; }
+
+.dmw-hook { font-family: var(--heading-font); font-size: 1.2rem; color: #ff4a3d !important; font-style: italic; }
+
+.dmw-cover { border-color: #4a1a15 !important; box-shadow: 0 0 0 1px #4a1a15, 0 0 36px rgba(216, 38, 27, 0.35), 0 24px 60px rgba(0, 0, 0, 0.75) !important; }
+
+.dmw-tags { list-style: none; padding: 0; margin: 0 0 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+
+.dmw-tags li { font-size: 0.95rem; padding: 2px 12px; border: 1px solid #5a2019; border-radius: 20px; color: #f1cfc9; background: rgba(216, 38, 27, 0.1); }
+
+.button.dmw-button { background: var(--toxic); color: #fff; }
+
+.button.dmw-button:hover { background: #ff4a3d; color: #fff; }
+
+.dmw-small { font-size: 0.95rem; color: var(--ash) !important; font-style: italic; }
+
+.dmw-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; }
+
+.dmw-columns h3 { font-size: 1.15rem; }
+
+.dmw-chapters { list-style: none; padding: 0; margin: 0; }
+
+.dmw-chapters li { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-bottom: 1px dotted #4a1a15; color: #ddd5cb; font-size: 1.1rem; }
+
+.dmw-chapters b { color: #ff4a3d; font-weight: 600; }
+
+.dmw-legal { font-size: 0.9rem; color: #8f877d !important; margin-top: 24px; }
+
+@media (max-width: 760px) {
+  .dmw-feature-art .dmw-cover { order: -1; }
+}
