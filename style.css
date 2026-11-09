@@ -293,6 +293,52 @@ section { padding: 72px 0; }
 
 .button.wod-button:hover { background: var(--neon); color: #fff; }
 
+.button.wod-ghost { color: #ff6f8a; border-color: #ff2d55; margin-left: 8px; }
+
+.button.wod-ghost:hover { background: rgba(255, 45, 85, 0.12); color: #ff8aa0; }
+
+/* Vampire landing page */
+
+.wod-page { background: #0a0608; }
+
+.wod-title { font-size: clamp(2.2rem, 6vw, 3.4rem); color: #f3e9ea; text-shadow: 0 0 22px rgba(255, 45, 85, 0.45); margin-bottom: 0.2em; }
+
+.wod-alt { background: #120a0d; }
+
+.wod h3 { color: #f3e9ea; font-size: 1.2rem; }
+
+.wod-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 36px; }
+
+.wod-chapters {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 820px;
+  columns: 2;
+  column-gap: 48px;
+}
+
+.wod-chapters li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 0;
+  border-bottom: 1px dotted #4a1320;
+  break-inside: avoid;
+  color: #e6d8da;
+  font-size: 1.1rem;
+}
+
+.wod-chapters b { color: var(--neon); font-weight: 600; }
+
+.wod-chapter-key span { color: var(--neon); font-style: italic; }
+
+.wod-legal { font-size: 0.9rem; color: #9c868a !important; margin-top: 28px; }
+
+@media (max-width: 760px) {
+  .wod-chapters { columns: 1; }
+}
+
 /* Slim "new bundle" strip */
 
 .bundle-strip { padding: 22px 0; background: var(--surface); }
